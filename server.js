@@ -1,5 +1,6 @@
 //Dependencies
 var express = require("express");
+var exphbs = require("express-handlebars");
 
 
 var app = express();
@@ -13,6 +14,10 @@ var db = require("./models");
 //Handles JSON Parse data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Set Handlebars.
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 //Routes
 
