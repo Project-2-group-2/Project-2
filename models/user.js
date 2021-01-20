@@ -5,5 +5,15 @@ module.exports = function(sequelize, DataTypes) {
       lname: DataTypes.STRING,
     });
 
+    User.associate = function(models) {
+
+        User.hasMany(models.Event, {
+          
+        });
+      };
+    
+    
+    
+
     return User;
 };
