@@ -3,5 +3,10 @@ module.exports = function(sequelize, DataTypes) {
       CategoryItem: DataTypes.STRING, 
     });
 
+    Category.associate = function(models) {
+      Category.hasMany(models.Guest, {
+        
+      });
+    };
     return Category;
 };
