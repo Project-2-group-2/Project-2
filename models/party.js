@@ -5,5 +5,12 @@ module.exports = function(sequelize, DataTypes) {
       
     });
 
+    Party.associate = function(models) {
+      Party.hasMany(models.Event, {
+        
+      });
+    };
+  
+
     return Party;
 };

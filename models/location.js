@@ -3,5 +3,11 @@ module.exports = function(sequelize, DataTypes) {
       address: DataTypes.STRING,
     });
 
+    Location.associate = function(models) {
+      Location.hasMany(models.Event, {
+        
+      });
+    };
+
     return Location;
 };
