@@ -37,11 +37,41 @@ app.post("/api/users", function(req, res) {
     db.Event.create({
         date: req.body.date,
         startTime: req.body.startTime,
-        endTime: req.body.endTime
+        endTime: req.body.endTime,
+        UserId: req.body.UserId,
+        PartyId: req.body.PartyId,
+        LocationId: req.body.LocationId
     }).then(function(data) {
       res.json(data);
     });
   });
 
-}
 
+
+app.get("/api/users", function(req, res) {
+  db.User.findAll({
+  }).then(function(data) {
+    console.log(data)
+    res.json(data);
+  });
+});
+
+
+app.get("/api/parties", function(req, res) {
+  db.Party.findAll({
+  }).then(function(data) {
+    console.log(data)
+    res.json(data);
+  });
+});
+
+app.get("/api/locations", function(req, res) {
+  db.Location.findAll({
+  }).then(function(data) {
+    console.log(data)
+    res.json(data);
+  });
+});
+
+
+}
