@@ -21,6 +21,10 @@ app.set("view engine", "handlebars");
 
 //Routes
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
+//Sets static folder
+app.use(express.static("public"));
 
 
 //Sequelize sync handler
