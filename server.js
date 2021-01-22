@@ -28,7 +28,7 @@ app.use(express.static("public"));
 
 
 //Sequelize sync handler
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({force: true}).then(function() {
     app.listen(PORT, function() {
       console.log("App listening on localhost:" + PORT);
     });
