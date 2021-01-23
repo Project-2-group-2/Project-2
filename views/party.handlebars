@@ -1,34 +1,34 @@
 <!-- Main container -->
 <div class="container mt-5 mb-5">
-    <div class="row justify-content-md-center">
-
+    <div class="row">
         <!-- Empty row -->
         <div class="col-lg-3"></div>
         <!-- Form for the attendee: name, category, party favor -->
-        <div class="col-lg-6 main-container">
+        <div class="col-lg-6 main-container p-5">
                 <form class="create-form">
-
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="party-attendee"><h5>Your Name:</h5></label>
+                                <input type="text" id="party-attendee" name="party-attendee">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="dropdown">
+                            <button class="btn dropdown-toggle button-dropdown" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select a category
+                            </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button class="party-dropdown-beverages button-dropdown-li" type="button">BEVERAGES</button></li>
+                                    <li><button class="party-dropdown-food button-dropdown-li" type="button">FOOD</button></li>
+                                    <li><button class="party-dropdown-other button-dropdown-li" type="button">OTHER</button></li>
+                                </ul>
+                            </div>
+                        </div>
                     <div class="form-group">
-                        <label for="party-attendee">Your Name:</label>
-                        <input type="text" id="party-attendee" name="party-attendee">
-                    </div>
-
-                    <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li><button class="party-dropdown-beverages" type="button">Beverages</button></li>
-                            <li><button class="party-dropdown-food" type="button">Food</button></li>
-                            <li><button class="party-dropdown-other" type="button">Other</button></li>
-                        </ul>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="party-favor">What do you bring to the party?</label>
+                        <label for="party-favor"><h5>What do you bring to the party?</h5></label>
                         <input type="text" id="party-favor" name="party-favor">
                     </div>
-                    
                     <div class="d-flex justify-content-center pt-4">
                         <button id="party-favor-button" type="submit">LET'S CELEBRATE!</button>
                     </div>
