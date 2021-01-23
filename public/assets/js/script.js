@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 // Variable assignment
 const firstName = $("#first-name");
 const lastName = $("#last-name");
@@ -152,7 +154,7 @@ function getLocation() {
 function getEvent() {
   $.get("/api/events", function(data) {
     console.log(data[0])
-    data.forEach(element =>  $(".event-list").prepend("<div>", element.User.fname + " " + element.Party.partyName + " " + element.Location.address +   "</div>"));
+    // data.forEach(element =>  $(".event-list").prepend("<div>", element.User.fname + " " + element.Party.partyName + " " + element.Location.address +   "</div>"));
 
     })
   }
@@ -175,6 +177,9 @@ setTimeout(function(){
 }, 300);
 
 
+
+
+})
 
 
 })
