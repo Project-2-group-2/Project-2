@@ -88,6 +88,7 @@ app.get("/api/events", function(req, res) {
     
   }).then(function(data) {
     res.json(data);
+    res.render("index", {events: {id: "test"}})
   });
 });
 
