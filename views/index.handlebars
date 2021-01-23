@@ -74,7 +74,7 @@
         <div class="col-lg-10">
             <h2>Party board</h2>
 
-            <ul class="event-list">
+            <div class="row event-list">
                 {{#each Events}}
                         <li>
                             <h4>{{this.id}}. {{Parties.partyName}}</h4>
@@ -85,7 +85,35 @@
                             <p>End time: {{this.endTime}}</p>
                         </li>
                 {{/each}}
-            </ul>
+
+                {{!-- <div class="col-lg-4 event-card">
+                    <h4>Murder Mystery</h4>
+                    <p class="event-card-name">by John Wick</p>
+                    <p>Chicago</p>
+                    <p>Date: 1/23/2021</p>
+                    <div class="row">
+                        <div class="col-6"><p>Start time: 12:30</p></div>
+                        <div class="col-6"><p>End time: 3:30</p></div>
+                    </div>
+                    <div class="d-flex justify-content-center pt-4">
+                        <button id="submit-enter-party" class="enter-party" type="submit">ENTER THE PARTY ></button>
+                    </div>                    
+                </div>
+
+                <div class="col-lg-4 event-card">
+                    <h4>Birthday</h4>
+                    <p class="event-card-name">by Steevie Wonder</p>
+                    <p>Moon</p>
+                    <p>Date: 1/29/2021</p>
+                    <div class="row">
+                        <div class="col-6"><p>Start time: 12:30</p></div>
+                        <div class="col-6"><p>End time: 3:30</p></div>
+                    </div>   
+                    <div class="d-flex justify-content-center pt-4">
+                        <button id="submit-enter-party" class="enter-party" type="submit">ENTER THE PARTY ></button>
+                    </div>    
+                </div> --}}
+            </div>
         </div>
         <div class="col-lg-1"></div>
     </div>

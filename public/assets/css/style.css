@@ -12,6 +12,11 @@ h5 {
     font-size: 16px;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
 /* buttons style */
 button {
     background-color: #5089F4;
@@ -35,6 +40,7 @@ button:hover {
     background-color: #7D51C4; 
 }
 
+/* input text style */
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -44,6 +50,7 @@ input[type=text] {
     background-color: #EDEDF5;
 }
 
+/* input time style */
 input[type=time] {
     padding: 6px 16px;
     margin: 8px 0;
@@ -53,6 +60,7 @@ input[type=time] {
     background-color: #EDEDF5;
 }
 
+/* input date style */
 input[type=date] {
     padding: 6px 12px;
     margin: 8px 0;
@@ -62,12 +70,48 @@ input[type=date] {
     background-color: #EDEDF5;
 }
 
+/* form group div spacing */
 .form-group {
     margin-top: 12px;
     margin-bottom: 12px;
 }
 
+/* main container style */
 .main-container {
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.07), 0 4px 8px rgba(0,0,0,.07), 0 8px 16px rgba(0,0,0,.07), 0 16px 32px rgba(0,0,0,.07), 0 32px 64px rgba(0,0,0,.07);
+}
+
+.event-card {
+    border-top: 5px solid #5089F4;
+    background-color: #fff;
+    margin: 12px;
+    padding: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.event-card-name {
+    font-size: 12px;
+}
+
+.enter-party {
+    background-color: white;
+    border: 1px solid #5089F4;
+    color: #5089F4;
+    padding: 12px 32px;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.enter-party:hover {
+    background-color: #5089F4; 
+    color: #fff;
 }

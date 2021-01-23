@@ -1,19 +1,17 @@
 <!-- Main container -->
-<div class="container mt-4 mb-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-md-center">
 
         <!-- Empty row -->
-        <div class="col-md-3"></div>
+        <div class="col-lg-3"></div>
         <!-- Form for the attendee: name, category, party favor -->
-        <div class="col-md-6">
+        <div class="col-lg-6 main-container">
                 <form class="create-form">
 
                     <div class="form-group">
                         <label for="party-attendee">Your Name:</label>
                         <input type="text" id="party-attendee" name="party-attendee">
                     </div>
-                    <button id="party-button-name" type="submit">Add Name!</button>
-                    <h4 class="test1-b"></h4>
 
                     <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,16 +24,17 @@
                         </ul>
                     </div>
 
-                    <br/>
                     <div class="form-group">
                         <label for="party-favor">What do you bring to the party?</label>
                         <input type="text" id="party-favor" name="party-favor">
                     </div>
-                    <button id="party-favor-button" type="submit">Let's celebrate!</button>
-                    <h4 class="test2-b"></h4>
+                    
+                    <div class="d-flex justify-content-center pt-4">
+                        <button id="party-favor-button" type="submit">LET'S CELEBRATE!</button>
+                    </div>
                 </form>
         </div>
         <!-- Empty row -->
-        <div class="col-md-3"></div>
+        <div class="col-lg-3"></div>
     </div>
 </div>
