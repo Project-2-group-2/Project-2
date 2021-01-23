@@ -9,9 +9,8 @@ const date = $("#date");
 const startTime = $("#start-time");
 const endTime = $("#end-time");
 const submitButton = $("#submit-button")
-const nameButton = $("#name-button")
-const partyButton = $("#party-button")
-const locationButton = $("#location-button")
+const attendeeName = $("#party-attendee")
+const partyFavor = $("#party-favor")
 
 //Arrays
 var nameArray = []
@@ -180,6 +179,27 @@ setTimeout(function(){
 
 
 })
+
+
+
+
+//Page 2
+function attendeeSubmit(e) {
+  e.preventDefault();
+
+
+var attendee = {
+  attendee: attendeeName.val().trim(),
+}
+
+$.post("/api/locations", attendee)
+.then(function(res){
+  console.log(res)
+});
+
+}
+
+
 
 
 })

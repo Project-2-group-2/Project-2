@@ -94,4 +94,18 @@ app.get("/api/events", function(req, res) {
 
 
 
+
+///Page 2
+app.post("/api/attendee", function(req, res) {
+  db.Attendee.create({
+      attendeeName: req.body.attendee
+  }).then(function(data) {
+    res.json(data);
+  });
+});
+
+
+
+
+
 }
