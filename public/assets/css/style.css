@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
 }
 
+h5 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
 /* buttons style */
 button {
     background-color: #5089F4;
@@ -19,7 +24,10 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
     border-radius: 30px;
+    
 }
 
 /* buttons style when hover */
@@ -34,6 +42,29 @@ input[type=text] {
     border: 1px solid #dedeeb;
     border-radius: 8px;
     background-color: #EDEDF5;
+}
+
+input[type=time] {
+    padding: 6px 16px;
+    margin: 8px 0;
+    margin-left: 4px;
+    border: 1px solid #dedeeb;
+    border-radius: 8px;
+    background-color: #EDEDF5;
+}
+
+input[type=date] {
+    padding: 6px 12px;
+    margin: 8px 0;
+    margin-left: 8px;
+    border: 1px solid #dedeeb;
+    border-radius: 8px;
+    background-color: #EDEDF5;
+}
+
+.form-group {
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .main-container {
