@@ -18,17 +18,17 @@ var locationArray = []
 
 
 // Takes in values from input fields and arrays
-function userSubmit(event) {
-  event.preventDefault();
+function userSubmit(e) {
+  e.preventDefault();
   
 
   var data = {
     date: date.val().trim(),
     startTime: startTime.val().trim(),
     endTime: endTime.val().trim(),
-    UserId: nameArray[0],
-    PartyId: partyArray[0],
-    LocationId: locationArray[0]
+    UserId: nameArray.slice(-1)[0],
+    PartyId: partyArray.slice(-1)[0],
+    LocationId: locationArray.slice(-1)[0]
   }
  // Creates a object to pass into AJAX
  console.log(data)
@@ -44,13 +44,14 @@ function insertData(data) {
     .then(function(res){
       console.log(res)
       alert("Party Created")
+      getEvent()
     });
 }
 
 
 // Handles POST AJAX for users
-function nameSubmit(event) {
-    event.preventDefault();
+function nameSubmit(e) {
+    e.preventDefault();
 if (!firstName.val().trim() || !firstName.val().trim()) {
     return;
   }
@@ -71,8 +72,8 @@ if (!firstName.val().trim() || !firstName.val().trim()) {
 
 
 // Handles POST AJAX for parties
-function partySubmit(event) {
-  event.preventDefault();
+function partySubmit(e) {
+  e.preventDefault();
 
 
 var party = {
@@ -89,8 +90,8 @@ $.post("/api/parties", party)
 
 
 // Handles POST AJAX for location
-function locationSubmit(event) {
-  event.preventDefault();
+function locationSubmit(e) {
+  e.preventDefault();
 
 
 var location = {
@@ -102,46 +103,7 @@ $.post("/api/locations", location)
   console.log(res)
 });
 
-
 }
-
-
-// On click for sumbit button that fires the userSubmit function
-submitButton.on("click", function postInput(e) {
-    e.preventDefault();
-    userSubmit(event)
-})
-
-// On click for sumbit button that fires the nameSubmit function and getName function
-nameButton.on("click", function postInput(e) {
-    e.preventDefault();
-    nameSubmit(event)
-    setTimeout(function(){
-    getName()
-  }, 100);
-})
-
-
-// On click for sumbit button that fires the partySubmit function and getParty function
-partyButton.on("click", function postInput(e) {
-  e.preventDefault();
-  partySubmit(event)
-  setTimeout(function(){
-  getParty()
-}, 100);
-})
-
-
-// On click for sumbit button that fires the locationSubmit function and getLocation function
-locationButton.on("click", function postInput(e) {
-  e.preventDefault();
-  locationSubmit(event)
-  setTimeout(function(){
-  getLocation()
-}, 100);
-})
-
-
 
 //Handles GET AJAX for user
 function getName() {
@@ -153,8 +115,7 @@ function getName() {
     console.log(nameArray[0])
    
 
-    //Tests GET AJAX
-    $(".test1").text(first + " " + last)
+
   
   });
 }
@@ -169,8 +130,7 @@ function getParty() {
     var partyId = data[0].id
     partyArray.push(partyId)
     
-    //Tests GET AJAX
-    $(".test2").text(party)
+
   
   });
 }
@@ -185,18 +145,40 @@ function getLocation() {
     var locationId = data[0].id
     locationArray.push(locationId)
     
-    //Tests GET AJAX
-    $(".test3").text(location)
+
   
   });
-
+}
 function getEvent() {
   $.get("/api/events", function(data) {
     console.log(data[0])
-    data.forEach(element =>  $(".data").append("<div>", element.User.fname, "</div>"));
-      // $(".data").text(JSON.stringify(data[0]))
+    data.forEach(element =>  $(".event-list").prepend("<div>", element.User.fname + " " + element.Party.partyName + " " + element.Location.address +   "</div>"));
+
     })
   }
-}
+
+
+
+//Test
+submitButton.on("click", function postInput(e) {
+  e.preventDefault();
+  partySubmit(e)
+  locationSubmit(e)
+  nameSubmit(e)
+  setTimeout(function(){
+  getParty()
+  getLocation()
+  getName()
+}, 100);
+setTimeout(function(){
+  userSubmit(e)
+}, 300);
+
+
+
+
+})
+
+
 
 
