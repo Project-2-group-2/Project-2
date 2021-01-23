@@ -1,0 +1,41 @@
+<!-- Main container -->
+<div class="container mt-4 mb-5">
+    <div class="row justify-content-md-center">
+
+        <!-- Empty row -->
+        <div class="col-md-3"></div>
+        <!-- Form for the attendee: name, category, party favor -->
+        <div class="col-md-6">
+                <form class="create-form">
+
+                    <div class="form-group">
+                        <label for="party-attendee">Your Name:</label>
+                        <input type="text" id="party-attendee" name="party-attendee">
+                    </div>
+                    <button id="party-button-name" type="submit">Add Name!</button>
+                    <h4 class="test1-b"></h4>
+
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><button class="party-dropdown-beverages" type="button">Beverages</button></li>
+                            <li><button class="party-dropdown-food" type="button">Food</button></li>
+                            <li><button class="party-dropdown-other" type="button">Other</button></li>
+                        </ul>
+                    </div>
+
+                    <br/>
+                    <div class="form-group">
+                        <label for="party-favor">What do you bring to the party?</label>
+                        <input type="text" id="party-favor" name="party-favor">
+                    </div>
+                    <button id="party-favor-button" type="submit">Let's celebrate!</button>
+                    <h4 class="test2-b"></h4>
+                </form>
+        </div>
+        <!-- Empty row -->
+        <div class="col-md-3"></div>
+    </div>
+</div>
