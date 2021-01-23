@@ -3,6 +3,10 @@ body {
     background-color: #EDEDF5;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
 /* buttons style */
 button {
     background-color: #5089F4;
@@ -21,4 +25,19 @@ button {
 /* buttons style when hover */
 button:hover {
     background-color: #7D51C4; 
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #dedeeb;
+    border-radius: 8px;
+    background-color: #EDEDF5;
+}
+
+.main-container {
+    margin: 20%;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.07), 0 4px 8px rgba(0,0,0,.07), 0 8px 16px rgba(0,0,0,.07), 0 16px 32px rgba(0,0,0,.07), 0 32px 64px rgba(0,0,0,.07);
 }
