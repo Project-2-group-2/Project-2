@@ -189,6 +189,14 @@ function getLocation() {
     $(".test3").text(location)
   
   });
+
+function getEvent() {
+  $.get("/api/events", function(data) {
+    console.log(data[0])
+    data.forEach(element =>  $(".data").append("<div>", element.User.fname, "</div>"));
+      // $(".data").text(JSON.stringify(data[0]))
+    })
+  }
 }
 
 

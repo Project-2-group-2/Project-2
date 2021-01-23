@@ -49,7 +49,9 @@ app.post("/api/users", function(req, res) {
 
 
 app.get("/api/users", function(req, res) {
-  db.User.findAll({where: {},
+  db.User.findAll({
+    limit: 1,
+    where: {},
     order: [ [ 'createdAt', 'DESC' ]]
   }).then(function(data) {
     console.log(data)
@@ -59,7 +61,9 @@ app.get("/api/users", function(req, res) {
 
 
 app.get("/api/parties", function(req, res) {
-  db.Party.findAll({where: {},
+  db.Party.findAll({
+    limit: 1,
+    where: {},
     order: [ [ 'createdAt', 'DESC' ]]
   }).then(function(data) {
     console.log(data)
@@ -68,13 +72,25 @@ app.get("/api/parties", function(req, res) {
 });
 
 app.get("/api/locations", function(req, res) {
-  db.Location.findAll({where: {},
+  db.Location.findAll({
+    limit: 1,
+    where: {},
     order: [ [ 'createdAt', 'DESC' ]]
   }).then(function(data) {
     console.log(data)
     res.json(data);
   });
 });
+
+app.get("/api/events", function(req, res) {
+  db.Event.findAll({
+    include: [db.User, db.Party, db.Location],
+    
+  }).then(function(data) {
+    res.json(data);
+  });
+});
+
 
 
 }
