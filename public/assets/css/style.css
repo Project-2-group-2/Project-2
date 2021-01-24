@@ -124,6 +124,7 @@ input[type=date] {
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
 }
+
 .button-dropdown:hover {
     background-color: #eef1f7;
     padding: 12px 32px;
@@ -132,6 +133,7 @@ input[type=date] {
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
 }
+
 .button-dropdown-li {
     background-color: white;
     color: #19191a;
@@ -140,7 +142,32 @@ input[type=date] {
     font-weight: 400;
     letter-spacing: 1px;
 }
+
 .button-dropdown-li:hover {
     background-color: white;
     color: #19191a;
+}
+
+.beverages-card {
+    border-top: 5px solid #cab1d4;
+    background-color: #fff;
+    padding: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.food-card {
+    border-top: 5px solid #90c8c4;
+    background-color: #fff;
+    padding: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.other-card {
+    border-top: 5px solid #7d93c0;
+    background-color: #fff;
+    padding: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
 }
