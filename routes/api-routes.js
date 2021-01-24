@@ -85,10 +85,13 @@ app.get("/api/locations", function(req, res) {
 app.get("/api/events", function(req, res) {
   db.Event.findAll({
     include: [db.User, db.Party, db.Location],
+    limit: 1,
+    where: {},
+    order: [ [ 'createdAt', 'DESC' ]]
     
   }).then(function(data) {
     res.json(data);
-    res.render("index", {events: {id: "test"}})
+
   });
 });
 
@@ -104,6 +107,29 @@ app.post("/api/attendee", function(req, res) {
   });
 });
 
+
+app.get("/api/events/one", function(req, res) {
+  db.Event.findAll({
+    include: [db.User, db.Party, db.Location],
+  
+    
+    
+  }).then(function(data) {
+    res.json(data);
+
+  });
+});
+
+app.get("/api/events/all", function(req, res) {
+  db.Event.findAll({
+    include: [db.User, db.Party, db.Location],
+   
+    
+  }).then(function(data) {
+    res.json(data);
+
+  });
+});
 
 
 
