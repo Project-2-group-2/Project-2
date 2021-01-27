@@ -177,6 +177,7 @@ $(document).ready(function () {
 
   //Test
   submitButton.on("click", function postInput(e) {
+    
     e.preventDefault();
     partySubmit(e)
     locationSubmit(e)
@@ -185,9 +186,19 @@ $(document).ready(function () {
       getParty()
       getLocation()
       getName()
+    
     }, 100);
     setTimeout(function () {
       userSubmit(e)
+      firstName.val("")
+      lastName.val("")
+      lastName.val("")
+      partyName.val("")
+      address.val("")
+      date.val("")
+      startTime.val("")
+      endTime.val("")
+      
     }, 600);
 
 
