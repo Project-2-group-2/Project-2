@@ -104,6 +104,9 @@ $(document).ready(function () {
     }, 100);
     setTimeout(function () {
       partyFavorSubmit(e);
+      attendeeName.val("")
+      partyFavor.val("")
+
     }, 600);
   });
   function getAllGuests() {
