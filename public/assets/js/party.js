@@ -50,11 +50,15 @@ $(document).ready(function () {
   }
   // Attendee End
   // Category Start
-  function categorySubmit(e) {
-    e.preventDefault();
+  function categorySubmit() {
+    // e.preventDefault();
     var category = {
-      categoryItem: 3,
+      categoryItem: $("#myselection").val()
     };
+ 
+    console.log("cate test " + $("#myselection").text())
+    console.log("cate test " + $("#myselection").val())
+ 
     $.post("/api/category", category).then(function (res) {
       console.log(res);
     });
@@ -93,7 +97,7 @@ $(document).ready(function () {
   partyButton.on("click", function postInput(e) {
     e.preventDefault();
     attendeeSubmit(e);
-    categorySubmit(e);
+    categorySubmit();
     // nameSubmit(e)
     setTimeout(function () {
       getAttendee();
