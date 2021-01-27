@@ -2,21 +2,17 @@
 body {
     background-color: #EDEDF5;
 }
-
 h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
 }
-
 h5 {
     font-weight: 400;
     font-size: 16px;
 }
-
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
-
 /* buttons style */
 button {
     background-color: #5089F4;
@@ -32,14 +28,11 @@ button {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     border-radius: 30px;
-    
 }
-
 /* buttons style when hover */
 button:hover {
     background-color: #7D51C4; 
 }
-
 /* input text style */
 input[type=text] {
     width: 100%;
@@ -49,7 +42,6 @@ input[type=text] {
     border-radius: 8px;
     background-color: #EDEDF5;
 }
-
 /* input time style */
 input[type=time] {
     padding: 6px 16px;
@@ -59,7 +51,6 @@ input[type=time] {
     border-radius: 8px;
     background-color: #EDEDF5;
 }
-
 /* input date style */
 input[type=date] {
     padding: 6px 12px;
@@ -69,19 +60,31 @@ input[type=date] {
     border-radius: 8px;
     background-color: #EDEDF5;
 }
-
+/* input date style */
+select {
+    height:48px;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border: 1px solid #dedeeb;
+    border-radius: 8px;
+    background-color: #EDEDF5;
+    color: #19191a;
+    padding: 4px 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
 /* form group div spacing */
 .form-group {
     margin-top: 12px;
     margin-bottom: 12px;
 }
-
 /* main container style */
 .main-container {
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.07), 0 4px 8px rgba(0,0,0,.07), 0 8px 16px rgba(0,0,0,.07), 0 16px 32px rgba(0,0,0,.07), 0 32px 64px rgba(0,0,0,.07);
 }
-
+/* Event card style */
 .event-card {
     border-top: 5px solid #5089F4;
     background-color: #fff;
@@ -90,11 +93,9 @@ input[type=date] {
     padding-left: 22px;
     padding-right: 22px;
 }
-
 .event-card-name {
     font-size: 12px;
 }
-
 .enter-party {
     background-color: white;
     border: 1px solid #5089F4;
@@ -110,44 +111,11 @@ input[type=date] {
     font-weight: 600;
     border-radius: 30px;
 }
-
 .enter-party:hover {
     background-color: #5089F4; 
     color: #fff;
 }
-
-.button-dropdown {
-    background-color: white;
-    padding: 12px 32px;
-    margin-top: 10%;
-    font-size: 28px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
-}
-
-.button-dropdown:hover {
-    background-color: #eef1f7;
-    padding: 12px 32px;
-    margin-top: 10%;
-    font-size: 28px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
-}
-
-.button-dropdown-li {
-    background-color: white;
-    color: #19191a;
-    padding: 4px 16px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.button-dropdown-li:hover {
-    background-color: white;
-    color: #19191a;
-}
-
+/* Card styling in the party page: Beverages list */
 .beverages-card {
     border-top: 5px solid #cab1d4;
     background-color: #fff;
@@ -155,7 +123,7 @@ input[type=date] {
     padding-left: 22px;
     padding-right: 22px;
 }
-
+/* Card styling in the party page: Food list */
 .food-card {
     border-top: 5px solid #90c8c4;
     background-color: #fff;
@@ -163,11 +131,15 @@ input[type=date] {
     padding-left: 22px;
     padding-right: 22px;
 }
-
+/* Card styling in the party page: Other list */
 .other-card {
     border-top: 5px solid #7d93c0;
     background-color: #fff;
     padding: 16px;
     padding-left: 22px;
     padding-right: 22px;
+}
+/* Center text */
+.center {
+    text-align: center;
 }
