@@ -167,7 +167,6 @@ $(document).ready(function () {
       </div>
       <div class="d-flex justify-content-center pt-4">
           <a href="/parties/${element.id}" id="submit-enter-party" class="enter-party" type="submit">JOIN THE PARTY >
-      </div>                    
       </div>`
       ));
 
@@ -189,7 +188,7 @@ $(document).ready(function () {
     }, 100);
     setTimeout(function () {
       userSubmit(e)
-    }, 300);
+    }, 600);
 
 
 
@@ -213,7 +212,6 @@ $(document).ready(function () {
       </div>
       <div class="d-flex justify-content-center pt-4">
           <a href="/parties/${element.id}" id="submit-enter-party" class="enter-party" type="submit">ENTER THE PARTY >
-      </div>                    
       </div>`
       ));
 

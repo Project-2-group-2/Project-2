@@ -20,12 +20,10 @@ $(document).ready(function () {
         console.log("event array " + eventArray[0]);
         if (element.id == id.text()) {
           console.log(element.User.fname);
-          $(".event-name")
-            .text(`Host: ${element.User.fname} ${element.User.lname}
-                Party: ${element.Party.partyName}
-                Date: ${element.date}
-                Start time: ${element.startTime}
-                End time: ${element.endTime}`);
+          $(".insert-event").append(`
+            <h1 class="center">${element.Party.partyName}</h1>
+            <p class="event-card-name center">by ${element.User.fname} ${element.User.lname}</p>
+            <p class="center">Date: ${element.date}<br/> From ${element.startTime} to ${element.endTime}</p>`)
         }
       });
     });
@@ -106,7 +104,7 @@ $(document).ready(function () {
     }, 100);
     setTimeout(function () {
       partyFavorSubmit(e);
-    }, 200);
+    }, 600);
   });
   function getAllGuests() {
     $.get("/api/guest/all", function (data) {
