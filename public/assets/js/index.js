@@ -212,14 +212,13 @@ $(document).ready(function () {
     $.get("/api/events/all", function (data) {
       console.log(data[0])
       data.forEach(element => $(".event-list").append(
-        `<div class="col-lg-4 event-card">
+        `<div class="col-lg-3 event-card">
       <h4>${element.Party.partyName}</h4>
       <p class="event-card-name">by ${element.User.fname} ${element.User.lname}</p>
       <p>${element.Location.address}</p>
       <p>Date: ${element.date}</p>
       <div class="row">
-          <div class="col-6"><p>Start time: ${element.startTime}</p></div>
-          <div class="col-6"><p>End time: ${element.endTime}</p></div>
+          <div><p>Start time: ${element.startTime} - End time: ${element.endTime}</p></div>
       </div>
       <div class="d-flex justify-content-center pt-4">
           <a href="/parties/${element.id}" id="submit-enter-party" class="enter-party" type="submit">ENTER THE PARTY >
