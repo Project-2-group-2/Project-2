@@ -9,6 +9,9 @@
         <div class="col-lg-6 main-container p-5">
                 <form class="create-form">
                     <div class="row">
+                        <div class="col-lg-12 md-4">
+                            <div class="insert-event"></div>
+                        </div>
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="party-attendee"><h5>Your Name:</h5></label>
@@ -16,15 +19,13 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="dropdown">
-                            <button class="btn dropdown-toggle button-dropdown" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select a category
-                            </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <li><button class="party-dropdown-beverages button-dropdown-li" type="button">BEVERAGES</button></li>
-                                    <li><button class="party-dropdown-food button-dropdown-li" type="button">FOOD</button></li>
-                                    <li><button class="party-dropdown-other button-dropdown-li" type="button">OTHER</button></li>
-                                </ul>
+                            <div class="form-group">
+                                <label for="party-attendee"><h5>Select a category:</h5></label>
+                                <select id="inputState party-dropdown" class="form-control" placeholder="Select a category">
+                                    <option class="party-dropdown-beverages" value="1">BEVERAGES</option>
+                                    <option class="party-dropdown-food" value="2">FOOD</option>
+                                    <option class="party-dropdown-food" value="3">OTHER</option>
+                                </select>
                             </div>
                         </div>
                     <div class="form-group">
