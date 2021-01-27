@@ -25,7 +25,7 @@ That app will store the party information, the users and the party favors in dat
     - Express 
     - Express-Handlebars
     - Node
-    - Our own ORM 
+    - Sequelize  
     - Heroku
 
 ## Issues we Faced 
@@ -34,4 +34,12 @@ None yet because we are awesome.
 
 ## Installation Instructions
 
-Install all dependencies (node, express, express-handlebars, mysql, mysql2). Then check to see if the app is connected to the server. Finally vist the link that was launched visiting heroku. 
+Install all dependencies (node, express, express-handlebars, mysql, mysql2). Then check to see if the app is connected to the server. Finally visit the link that was launched visiting heroku. 
+
+## Images
+
+![Screen Shot 2021-01-27 at 2 38 30 PM](https://user-images.githubusercontent.com/69474649/106051125-a47a0180-60ad-11eb-91a2-77b3df99a973.png)
+
+![Screen Shot 2021-01-27 at 2 38 42 PM](https://user-images.githubusercontent.com/69474649/106051131-a643c500-60ad-11eb-9ce4-4c239474ed24.png)
+
+![Screen Shot 2021-01-27 at 2 38 30 PM](https://user-images.githubusercontent.com/69474649/106051137-ab087900-60ad-11eb-83a8-c6328a2505a4.png)
