@@ -24,7 +24,6 @@ $(document).ready(function () {
   function userSubmit(e) {
     e.preventDefault();
 
-
     var data = {
       date: date.val().trim(),
       startTime: startTime.val().trim(),
@@ -34,7 +33,7 @@ $(document).ready(function () {
       LocationId: locationArray.slice(-1)[0]
     }
     // Creates a object to pass into AJAX
-    console.log(data)
+    //console.log(data)
     insertData(data);
 
   }
@@ -42,15 +41,13 @@ $(document).ready(function () {
   // AJAX Post for Events Table
   function insertData(data) {
 
-
     $.post("/api/events", data)
       .then(function (res) {
-        console.log(res)
+        //console.log(res)
         alert("Party Created")
         getEvent()
       });
   }
-
 
   // Handles POST AJAX for users
   function nameSubmit(e) {
@@ -67,12 +64,11 @@ $(document).ready(function () {
 
     $.post("/api/users", name)
       .then(function (res) {
-        console.log(res)
+        //console.log(res)
       });
 
 
   }
-
 
   // Handles POST AJAX for parties
   function partySubmit(e) {
@@ -85,12 +81,11 @@ $(document).ready(function () {
 
     $.post("/api/parties", party)
       .then(function (res) {
-        console.log(res)
+        //console.log(res)
       });
 
 
   }
-
 
   // Handles POST AJAX for location
   function locationSubmit(e) {
@@ -103,9 +98,8 @@ $(document).ready(function () {
 
     $.post("/api/locations", location)
       .then(function (res) {
-        console.log(res)
+        //console.log(res)
       });
-
   }
 
   //Handles GET AJAX for user
@@ -115,26 +109,18 @@ $(document).ready(function () {
       var last = data[0].lname
       var name = data[0].id
       nameArray.push(name)
-      console.log(nameArray[0])
-
-
-
-
+      //console.log(nameArray[0])
     });
   }
-
 
   //Handles GET AJAX for party
   function getParty() {
     $.get("/api/parties", function (data) {
 
-      console.log(data[0])
+      //console.log(data[0])
       var party = data[0].partyName
       var partyId = data[0].id
       partyArray.push(partyId)
-
-
-
     });
   }
 
@@ -143,18 +129,17 @@ $(document).ready(function () {
   function getLocation() {
     $.get("/api/locations", function (data) {
 
-      console.log(data[0])
+      //console.log(data[0])
       var location = data[0].address
       var locationId = data[0].id
       locationArray.push(locationId)
-
-
-
     });
   }
+
+  
   function getEvent() {
     $.get("/api/events", function (data) {
-      console.log(data[0])
+      //console.log(data[0])
       data.forEach(element => $(".event-list").append(
         `<div class="col-lg-4 event-card">
       <h4>${element.Party.partyName}</h4>
@@ -173,11 +158,9 @@ $(document).ready(function () {
     })
   }
 
-
-
   //Test
   submitButton.on("click", function postInput(e) {
-    
+
     e.preventDefault();
     partySubmit(e)
     locationSubmit(e)
@@ -186,7 +169,7 @@ $(document).ready(function () {
       getParty()
       getLocation()
       getName()
-    
+
     }, 100);
     setTimeout(function () {
       userSubmit(e)
@@ -198,19 +181,14 @@ $(document).ready(function () {
       date.val("")
       startTime.val("")
       endTime.val("")
-      
+
     }, 600);
-
-
-
 
   })
 
-
-
   function getAllEvents() {
     $.get("/api/events/all", function (data) {
-      console.log(data[0])
+      //console.log(data[0])
       data.forEach(element => $(".event-list").append(
         `<div class="col-lg-3 event-card">
       <h4>${element.Party.partyName}</h4>
@@ -227,10 +205,6 @@ $(document).ready(function () {
 
     })
   }
-
-
-
-
 
 })
 

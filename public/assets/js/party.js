@@ -12,14 +12,14 @@ $(document).ready(function () {
   getEvent();
   function getEvent() {
     $.get("/api/events/one", function (data) {
-      console.log(data);
+      //console.log(data);
       data.forEach((element) => {
-        console.log("this one" + element);
-        console.log(id.text());
+        // console.log("this one" + element);
+        // console.log(id.text());
         eventArray.push(parseInt(id.text()));
-        console.log("event array " + eventArray[0]);
+        // console.log("event array " + eventArray[0]);
         if (element.id == id.text()) {
-          console.log(element.User.fname);
+          // console.log(element.User.fname);
           $(".insert-event").append(`
             <h1 class="center">${element.Party.partyName}</h1>
             <p class="event-card-name center">by ${element.User.fname} ${element.User.lname}</p>
@@ -28,6 +28,7 @@ $(document).ready(function () {
       });
     });
   }
+
   // Attendee Start
   function attendeeSubmit(e) {
     e.preventDefault();
@@ -35,17 +36,19 @@ $(document).ready(function () {
       attendee: attendeeName.val().trim(),
     };
     $.post("/api/attendee", attendee).then(function (res) {
-      console.log(res);
+      // console.log(res);
     });
   }
+
   //Handles GET AJAX for attendee
   function getAttendee() {
     $.get("/api/attendee", function (data) {
-      console.log(data[0]);
+      // console.log(data[0]);
       var attendeeId = data[0].id;
       attendeeArray.push(attendeeId);
     });
   }
+
   // Attendee End
   // Category Start
   function categorySubmit() {
@@ -53,22 +56,24 @@ $(document).ready(function () {
     var category = {
       categoryItem: $("#myselection").val()
     };
- 
-    console.log("cate test " + $("#myselection").text())
-    console.log("cate test " + $("#myselection").val())
- 
+
+    // console.log("cate test " + $("#myselection").text())
+    // console.log("cate test " + $("#myselection").val())
+
     $.post("/api/category", category).then(function (res) {
-      console.log(res);
+      //console.log(res);
     });
   }
+
   //Handles GET AJAX for attendee
   function getCategory() {
     $.get("/api/category", function (data) {
-      console.log(data[0]);
+      //console.log(data[0]);
       var categoryId = data[0].id;
       categoryArray.push(categoryId);
     });
   }
+
   // Category End
   // Takes in values from input fields and arrays
   function partyFavorSubmit(e) {
@@ -80,17 +85,19 @@ $(document).ready(function () {
       eventId: eventArray.slice(-1)[0],
     };
     // Creates a object to pass into AJAX
-    console.log(data);
+    //console.log(data);
     partyData(data);
   }
+
   // AJAX Post for Guest Table
   function partyData(data) {
     $.post("/api/guests", data).then(function (res) {
-      console.log(res);
+      //console.log(res);
       // alert("Party Created")
       getOneGuests();
     });
   }
+
   //Test
   partyButton.on("click", function postInput(e) {
     e.preventDefault();
@@ -109,9 +116,10 @@ $(document).ready(function () {
 
     }, 600);
   });
+
   function getAllGuests() {
     $.get("/api/guest/all", function (data) {
-      console.log(data[0]);
+      //console.log(data[0]);
       data.forEach((element) => {
         if (element.EventId == id.text()) {
           if (element.Category.CategoryItem == 1) {
@@ -123,7 +131,7 @@ $(document).ready(function () {
           if (element.Category.CategoryItem == 3) {
             var categoryCard = $(".insert-other");
           }
-          console.log("cate card" + categoryCard);
+          //console.log("cate card" + categoryCard);
           categoryCard.append(
             `
           <li>${element.Attendee.attendeeName} is bringing: ${element.PartyFavor}</li>
@@ -133,9 +141,10 @@ $(document).ready(function () {
       });
     });
   }
+  
   function getOneGuests() {
     $.get("/api/guests/one", function (data) {
-      console.log(data[0]);
+      //console.log(data[0]);
       data.forEach((element) => {
         if (element.EventId == id.text()) {
           if (element.Category.CategoryItem == 1) {

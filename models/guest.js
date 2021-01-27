@@ -1,9 +1,9 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Guest = sequelize.define("Guest", {
         PartyFavor: DataTypes.STRING,
     });
 
-    Guest.associate = function(models) {
+    Guest.associate = function (models) {
         Guest.belongsTo(models.Event, {
             foreignKey: {
                 allowNull: false
@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
 
         Guest.belongsTo(models.Attendee, {
             foreignKey: {
-              allowNull: false
+                allowNull: false
             }
         });
 
@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false
             }
         });
-      };
+    };
 
     return Guest;
 };
