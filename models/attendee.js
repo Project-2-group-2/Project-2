@@ -1,13 +1,13 @@
-module.exports = function(sequelize, DataTypes) {
-    var Attendee = sequelize.define("Attendee", {
-      attendeeName: DataTypes.STRING,
+module.exports = function (sequelize, DataTypes) {
+  var Attendee = sequelize.define("Attendee", {
+    attendeeName: DataTypes.STRING,
+  });
+
+  Attendee.associate = function (models) {
+    Attendee.hasMany(models.Guest, {
+
     });
+  };
 
-    Attendee.associate = function(models) {
-      Attendee.hasMany(models.Guest, {
-        
-      });
-    };
-
-    return Attendee;
+  return Attendee;
 };

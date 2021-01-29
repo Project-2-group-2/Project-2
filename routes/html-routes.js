@@ -4,10 +4,6 @@ module.exports = function(app) {
         res.render("index");
       });
   
-  
-  
-
-
   app.get("/parties/:id", function(req, res) {
     var event = {event: req.params.id}
     res.render("party", event);
